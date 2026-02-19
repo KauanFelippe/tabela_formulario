@@ -5,16 +5,18 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #868486; /* Cor neutra */
+    background-color: #0d0d0d; /* preto bem escuro */
     font-family: Arial, Helvetica, sans-serif;
+    color: #4d4747;
 }
 
 /* Caixa do formulário */
 form {
-    background-color: #ffffff;
+    background-color: #121212; /* preto quase puro */
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid #4a148c; /* roxo escuro */
+    box-shadow: 0 0 20px rgba(74, 20, 140, 0.4);
     width: 350px;
 }
 
@@ -22,21 +24,57 @@ form {
 h1 {
     text-align: center;
     margin-bottom: 20px;
+    color: #d500f9; /* roxo vibrante */
+}
+
+/* Labels */
+label {
+    color: #bbbbbb;
+    font-size: 14px;
 }
 
 /* Inputs e selects */
 input, select {
     width: 100%;
-    padding: 8px;
+    padding: 10px;
     margin-top: 5px;
     margin-bottom: 15px;
     border-radius: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid #7b1fa2; /* roxo médio */
+    background-color: #1a1a1a;
+    color: #e0e0e0;
     box-sizing: border-box;
+    transition: 0.3s;
+}
+
+/* Placeholder */
+input::placeholder {
+    color: #888;
 }
 
 /* Efeito ao clicar */
 input:focus, select:focus {
     outline: none;
-    border-color: #888;
+    border-color: #d500f9;
+    box-shadow: 0 0 8px rgba(213, 0, 249, 0.5);
+}
+
+/* Botão (mantendo estilo gamer) */
+button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #7b1fa2;
+    background-color: #5309dd;
+    color: #e0e0e0;
+    cursor: pointer;
+    transition: 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+button:hover {
+    background-color: #4a148c;
+    border-color: #d500f9;
+    box-shadow: 0 0 15px rgba(213, 0, 249, 0.5);
 }
