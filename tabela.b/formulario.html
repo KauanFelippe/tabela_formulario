@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style3.css">
+    <title>Document</title>
+</head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background-color: #f2f2f2;
+        }
+
+        .formulariio {
+            width: 350px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            border: 1px solid #ccc;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        .campo {
+            width: 100%;
+            padding: 5px;
+            margin-top: 5px;
+        }
+
+        button {
+            margin-top: 15px;
+            width: 100%;
+            padding: 8px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+        }
+    </style>
+
+<body>
+    <form class="formulario" onsubmit="alert('Dados salvo com sucesso!')">
+        <h1>Formulário</h1>
+        <label>Nome Completo:</label>
+        <input type="text" class="campo" maxlength="30" placeholder="Digite seu Nome">
+        
+       <label>Data de Nascimento</label>
+       <input type="date"> <br><br>
+
+        <label>Email:</label>
+        <input type="text" id="email"> <br><br>
+
+        <label>Senha:</label>
+        <input type="password" name="senha"> <br><br>
+        <label>Confimação:</label>
+        <input type="password" name="confirmação">
+
+        Gênero:
+        <select>
+            <option type="checkbox" name="genero">Masculino<br><br>
+            <option type="checkbox" name="genero">Feminino<br><br>
+
+        </select>
+        <br><br> Selecione a Região:
+        <select>
+            <option type="checkbox" name="selecione"> Selecione
+            <option type="radio" name="regiao" value="sul"> Sul
+            <option type="radio" name="regiao" value="sudeste"> Sudeste
+            <option type="radio" name="regiao" value="norte"> Norte
+            <option type="radio" name="regiao" value="nordeste"> Nordeste
+            <option type="radio" name="regiao" value="centroeste"> Centro Este
+        </select>
+
+        <label>Cursos</label>
+        <select class="campo" required>
+            <option type="checkbox" name="selecione"> Selecione
+            <option value="ds"> Desenvolvimento de sistemas</option>
+            <option value="info"> Informatica</option>
+            <option value="redes"> Redes</option> 
+         </select>
+
+        <form>
+            <button onclick="enviar()">Enviar</button>
+        </form>
+</body>
+
+</html>

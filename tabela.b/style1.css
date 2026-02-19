@@ -1,0 +1,330 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #0d0d0d;          /* preto bem escuro */
+    color: #e0e0e0;                     /* cinza claro para legibilidade */
+    line-height: 1.6;
+}
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* box model */
+header {
+    background-color: #110011;          /* roxo muito escuro */
+    padding: 20px;
+    border-bottom: 1px solid #4a148c;  /* roxo médio */
+    margin-bottom: 20px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+/* menu */
+nav {
+    margin-top: 10px;
+}
+
+nav button {
+    text-align: center;
+    padding: 8px 15px;
+    margin: 10px;
+    border: 1px solid #7b1fa2;         /* roxo */
+    background-color: #1a1a1a;          /* cinza bem escuro */
+    color: #e0e0e0;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 0.25s;
+}
+
+nav button:hover {
+    background-color: #4a148c;          /* roxo médio */
+    border-color: #d500f9;
+}
+
+/* seções */
+section {
+    background-color: #121212;          /* preto quase puro */
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #4a148c;         /* roxo escuro */
+    border-radius: 5%;
+}
+
+/* títulos */
+h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #d500f9;                     /* roxo vibrante */
+}
+
+/* parágrafos */
+p {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #cccccc;
+}
+
+/* artigos */
+article {
+    border: 1px solid #7b1fa2;         /* roxo médio */
+    padding: 15px;
+    margin-top: 15px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #1e1e1e;
+}
+
+/* lista */
+ul {
+    list-style-position: inside;
+    color: #bbbbbb;
+}
+
+/* rodapé */
+footer {
+    background-color: #200040;          /* roxo bem escuro */
+    color: #e0e0e0;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+    border-top: 1px solid #7b1fa2;
+    border-radius: 5px;
+}
+
+/* carrossel */
+.carrosel {
+    width: 400px;
+    height: 400px;
+    margin: 30px auto 10px;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 2px solid #4a148c;
+    background: #000;
+}
+
+.carrosel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+}
+
+.carrosel img.ativa {
+    display: block;
+}
+
+/* botões do carrossel */
+.botoes {
+    text-align: center;
+}
+
+.botoes button {
+    padding: 12px;
+    margin: 5px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: #4a148c;          /* roxo escuro */
+    color: white;
+    font-size: 16px;
+    transition: all 0.25s;
+}
+
+.botoes button:hover {
+    background-color: #7b1fa2;
+    box-shadow: 0 0 12px rgba(213, 0, 249, 0.5);
+}
+
+/* tabela */
+.tabela-gamepass {
+    width: 80%;
+    margin-left: 90px;
+    border-collapse: collapse;
+    border-radius: 5px;
+    background: #1a1a1a;
+}
+
+.tabela-gamepass th,
+.tabela-gamepass td {
+    padding: 10px;
+    border: 1px solid #4a148c;
+    color: #e0e0e0;
+}
+
+.tabela-gamepass th {
+    background: #200040;
+    color: #d500f9;
+}
+
+/* ────────────────────────────────────────────────
+   Botões neon / futuristas (mantidos exatamente iguais)
+──────────────────────────────────────────────── */
+button {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 10px 30px;
+    transition: 0.5s;
+    position: relative;
+    font-size: 17px;
+    background: #111;
+    border: none;
+    color: #fff;
+}
+
+button:hover {
+    letter-spacing: 0.25em;
+    background: #c51162;                /* vermelho-rosa neon */
+    color: #c51162;
+    box-shadow: 0 0 45px #c51162;
+}
+
+button::before {
+    content: '';
+    position: absolute;
+    inset: 2px;
+    background: #0a0a0a;
+}
+
+button span {
+    position: relative;
+    z-index: 1;
+}
+
+button i {
+    position: absolute;
+    inset: 0;
+    display: block;
+}
+
+button i::before {
+    content: '';
+    position: absolute;
+    border: 2px solid #ff1867;
+    width: 7px;
+    height: 4px;
+    top: -3.5px;
+    left: 80%;
+    background: #0a0a0a;
+    transform: translateX(-50%);
+    transition: 0.5s;
+}
+
+button:hover i::before {
+    width: 20px;
+    left: 20%;
+}
+
+button i::after {
+    content: '';
+    position: absolute;
+    border: 2px solid #ff1867;
+    width: 7px;
+    height: 4px;
+    bottom: -3.5px;
+    left: 20%;
+    background: #0a0a0a;
+    transform: translateX(-50%);
+    transition: 0.5s;
+}
+
+button:hover i::after {
+    width: 20px;
+    left: 80%;
+}
+
+/* Botões ícones sociais (mantidos 100% iguais) */
+.button {
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    position: relative;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    transition: transform 0.15s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.button:nth-child(6) {
+    background: #0d1117;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.button svg {
+    width: 32px;
+    height: 32px;
+    color: white;
+    transition: transform 0.4s ease, filter 0.4s ease;
+    z-index: 2;
+}
+
+.button:nth-child(6)::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: radial-gradient(
+        circle at 30% 30%,
+        rgba(88, 101, 242, 0.18) 0%,
+        rgba(88, 101, 242, 0) 60%
+    );
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.button:nth-child(6):hover {
+    transform: scale(1.08);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+.button:nth-child(6):hover::before {
+    opacity: 1;
+    animation: githubPulse 2.5s infinite ease-in-out;
+}
+
+.button:nth-child(6):hover svg {
+    transform: rotate(12deg) scale(1.12);
+    filter: drop-shadow(0 0 6px rgba(88, 101, 242, 0.7));
+}
+
+@keyframes githubPulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.6;
+    }
+    50% {
+        transform: scale(1.6);
+        opacity: 0.15;
+    }
+}
+
+.button:active {
+    transform: scale(0.92) !important;
+    transition: transform 0.08s ease;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .button:nth-child(6):hover svg {
+        animation: subtleSpin 10s linear infinite;
+    }
+}
+
+@keyframes subtleSpin {
+    from {
+        transform: rotate(0deg) scale(1.12);
+    }
+    to {
+        transform: rotate(360deg) scale(1.12);
+    }
+}
